@@ -1,6 +1,20 @@
-#######
-##FOR##
-#######
+
+########
+## IF ##
+########
+
+a = 100
+b = 10
+if b > a:
+  print("b es mayor que a")
+elif a == b:
+  print("a y b son iguales")
+else:
+  print("a es mayor que b")
+
+#########
+## FOR ##
+#########
 
 #FOR básico
 lista = ["uno", "dos", "tres"]
@@ -42,9 +56,9 @@ for x in frutas:
   
 print() 
 
-###########
-##RANGE()##
-###########
+#############
+## RANGE() ##
+#############
 #Range es una función que crea una lista de elementos del primer elemento específicado(0 por defecto) a n-1 del segundo elemento indicado, con una secuencia indicada(1 por defecto).
 
 #RANGE sin especificar elemento inicial
@@ -65,9 +79,9 @@ for x in range(2, 10, 3):
 
 print() 
 
-#########
-##WHILE##
-#########
+###########
+## WHILE ##
+###########
 
 i = 1
 while i < 6:

@@ -1,0 +1,5 @@
+#Bucle FOR
+
+lista = ["uno", "dos", "tres"]
+for item in lista:
+  print(item)

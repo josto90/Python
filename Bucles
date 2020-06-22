@@ -1,5 +1,16 @@
-#Bucle FOR
-
+#FOR
+print("FOR básico")
 lista = ["uno", "dos", "tres"]
 for item in lista:
   print(item)
+print()  
+
+ # RANGE()
+ ##Range es una función que crea una lista de elementos del primer elemento específicado(0 por defecto) a n-1 del segundo elemento indicado
+print("RANGE sin especificar elemento inicial")
+for x in range(5):
+  print(x) 
+print()  
+print("RANGE Especificando elemento inicial")
+for x in range(2,5):
+  print(x) 

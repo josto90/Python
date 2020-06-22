@@ -1,2 +1,2 @@
 # Python
- Repositorio con prácicas personales en Python
+ Repositorio con prácticas personales en Python

@@ -1,24 +1,63 @@
-#FOR
-print("FOR básico")
+#######
+##FOR##
+#######
+
+#FOR básico
 lista = ["uno", "dos", "tres"]
 for item in lista:
   print(item)
+
 print()  
 
- #RANGE()
- ##Range es una función que crea una lista de elementos del primer elemento específicado(0 por defecto) a n-1 del segundo elemento indicado, con una secuencia indicada(1 por defecto).
-print("RANGE sin especificar elemento inicial")
+#FOR con ELSE
+for x in range(6):
+  print(x)
+else:
+  print("Bucle terminado") 
+
+print()  
+
+#pass permite pasar una iteración de un bucle
+for x in [0, 1, 2]:
+  pass
+
+print()  
+
+#break permite salir del bucle
+frutas = ["manzana", "plátano", "melón"]
+for x in frutas:
+  print(x)
+  if x == "plátano":
+    break
+
+print()  
+
+#Continue permite saltar esa iteracción
+frutas = ["manzana", "plátano", "melón"]
+for x in frutas:
+  
+  if x == "plátano":
+    continue
+  print(x)
+  
+print() 
+###########
+##RANGE()##
+###########
+#Range es una función que crea una lista de elementos del primer elemento específicado(0 por defecto) a n-1 del segundo elemento indicado, con una secuencia indicada(1 por defecto).
+
+#RANGE sin especificar elemento inicial
 for x in range(5):
   print(x) 
 
 print()  
 
-print("RANGE Especificando elemento inicial")
+#RANGE Especificando elemento inicial
 for x in range(2,5):
   print(x) 
 
 print()  
 
-print("RANGE con secuencia diferente a 1")
+#RANGE con secuencia diferente a 1
 for x in range(2, 10, 3):
   print(x)

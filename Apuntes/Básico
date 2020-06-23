@@ -36,7 +36,31 @@ print(z)
 
 print()
 
-# Las variables que se crean fuera de una función (como en todos los ejemplos anteriores) se conocen como variables globales
+# Las variables pueden ser globales o locales
+# Si utilizas la key global, una variable dentro de una función se transforma en global.
+def myfunc():
+  global x
+  x = "fantastic"
+
+myfunc()
+
+print("Python is " + x) 
+
+print()
+
+# Para cambiar el valor de una variable global dentro de una función, consulte la variable usando la palabra clave global:
+
+x = "awesome"
+
+def myfunc():
+  global x
+  x = "fantastic"
+
+myfunc()
+
+print("Python is " + x) 
+
+print()
 
 #############
 ## NUMEROS ##

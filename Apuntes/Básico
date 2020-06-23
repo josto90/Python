@@ -1,3 +1,43 @@
+###############
+## VARIABLES ##
+###############
+
+ #Reglas para las variables de Python:
+
+    # Un nombre de variable debe comenzar con una letra o el carácter de subrayado
+    # Un nombre de variable no puede comenzar con un número
+    # Un nombre de variable solo puede contener caracteres alfanuméricos y guiones bajos (A-z, 0-9 y _)
+    # Los nombres de las variables distinguen entre mayúsculas y minúsculas (edad, edad y EDAD son tres variables diferentes)
+
+#Legales:
+myvar = "John"
+my_var = "John"
+_my_var = "John"
+myVar = "John"
+MYVAR = "John"
+myvar2 = "John"
+
+#Ilegales:
+# 2myvar = "John"
+# my-var = "John"
+# my var = "John"
+
+# Asignación múltiple de valores a variables
+x, y, z = "Naranja", "Plátano", "Cereza"
+
+# Combinación de variables
+x = "awesome"
+print("Python is " + x)
+
+x = "Python is "
+y = "awesome"
+z =  x + y
+print(z)
+
+print()
+
+# Las variables que se crean fuera de una función (como en todos los ejemplos anteriores) se conocen como variables globales
+
 #############
 ## NUMEROS ##
 #############
@@ -25,6 +65,16 @@ print(type(b))
 print(type(c)) 
 
 print()  
+
+#############
+## CASTING ##
+#############
+
+# la conversión en python se realiza mediante funciones de constructor:
+
+int()
+float() 
+str()
 
 ###############
 ## BOOLEANOS ##

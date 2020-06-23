@@ -1,3 +1,21 @@
+###############
+## BOOLEANOS ##
+###############
+# Con la función bool() puedes evaluar cualquier valor, devolviendo true o false
+# Cualquier string es True, excepto las vacías. Lo mismo ocurre con las listas, tuplas, sets y diccionarios. En el caso de los números, solo es false el 0.
+
+print(bool("Hello"))
+print(bool(15))
+
+print()  
+
+# Python también tiene muchas funciones integradas que devuelven un valor booleano, como la función isinstance (),
+# que se puede usar para determinar si un objeto es de cierto tipo de datos:
+
+x = 200
+print(isinstance(x, int)) 
+
+print()  
 
 ########
 ## IF ##

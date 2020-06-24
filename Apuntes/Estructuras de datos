@@ -40,4 +40,16 @@ print(lista[2:])   # Muestra desde el elemento 2 al final.
 
 print()
 
+# Cambio de un valor de la lista
+lista = ["manzana", "plátano", "cereza"]
+lista[1] = "sandía"
+print(lista)
 
+print()
+
+# Recorrer una lista
+lista = ["manzana", "plátano", "cereza"]
+for x in lista:
+  print(x) 
+
+print()

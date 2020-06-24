@@ -20,3 +20,24 @@ print(lista)
 
 print()
 
+# Acceso a un elemento
+lista = ["manzana", "plátano", "cereza"]
+print(lista[1])
+
+print()
+
+# Acceso al último elemento
+lista = ["manzana", "plátano", "cereza"]
+print(lista[-1])
+
+print()
+
+# Rango de elementos. 
+lista = ["manzana", "plátano", "cereza", "naranja", "kiwi", "melón", "mango"]
+print(lista[2:5])  # El elemento 5 no es incluido
+print(lista[:4])   # Muestra desde el primer elemento al 4(no incluido)
+print(lista[2:])   # Muestra desde el elemento 2 al final.
+
+print()
+
+

@@ -207,3 +207,32 @@ i = 1
 while i < 6:
   print(i)
   i += 1
+
+
+####################
+## TIPOS DE DATOS ##
+####################
+
+# Tipo texto: str
+# Tipo numérico: int, float, complex
+# Tipo secuencial: list, tuple, range
+# Tipo mapeo: dict
+# Tipo set: set, frozenset
+# Tipo booleano: bool
+# Tipo binario: bytes, bytearray, memoryview
+
+# Ejemplos de asignación
+x = "Hello World"                             # str   
+x = 20                                        # int   
+x = 20.5                                      # float   
+x = 1j                                        # complex   
+x = ["apple", "banana", "cherry"]             # list  
+x = ("apple", "banana", "cherry")             # tuple   
+x = range(6)                                  # range   
+x = {"name" : "John", "age" : 36}             # dict  
+x = {"apple", "banana", "cherry"}             # set   
+x = frozenset({"apple", "banana", "cherry"})  # frozenset   
+x = True                                      # bool  
+x = b"Hello"                                  # bytes   
+x = bytearray(5)                              # bytearray   
+x = memoryview(bytes(5))                      # memoryview

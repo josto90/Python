@@ -20,9 +20,37 @@ print(tupla)
 print()
 
 # Acceso a sus elementos
-tupla = ("manzana", "plátano", "cereza")
+tupla = ("manzana", "plátano", "cereza","kiwi", "melon", "mango")
 print(tupla[1])
 print(tupla[-1])
+print(tupla[2:5])
+print(tupla[-4:-1])
+print()
+
+# Modificar una tupla. Al ser inmutable, hay que convertirla en una lista.
+x = ("manzana", "plátano", "cereza")
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)
+print(x) 
 
 print()
 
+# Recorrer una tupla
+tupla = ("manzana", "plátano", "cereza")
+for x in tupla:
+  print(x)
+
+print()
+
+# Comprobar si un item existe en una tupla
+tupla = ("manzana", "plátano", "cereza")
+if "manzana" in tupla:
+  print("Sí, existe") 
+
+print()
+
+# Constructor tuple()
+
+tupla = tuple(("manzana", "plátano", "cereza")) # doble paréntesis
+print(tupla)

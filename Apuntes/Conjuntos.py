@@ -34,4 +34,45 @@ print("cereza" in set1)
 
 print()
 
- 
+# Añadir un elemento a un conjunto.
+set1 = {"manzana", "plátano", "cereza"}
+
+set1.add("naranja")
+
+print(set1) 
+
+print() 
+
+# Añadir múltiples elementos a un conjunto.
+set1 = {"manzana", "plátano", "cereza"}
+
+set1.update(["naranja", "mango", "uvas"])
+
+print(set1)
+print() 
+
+# Eliminar elementos de un conjunto.
+set1 = {"manzana", "plátano", "cereza"}
+set1.remove("plátano")    # Remove devuelve error si el elemento no existe. Discard no.
+set1.discard("cereza")
+set1.pop() 				  # Elimina el último elemento
+set1.clear()			  # Vacía el conjunto.
+
+print(set1)
+print() 
+
+# Unión de conjuntos.
+
+set1 = {"a", "b" , "c"}
+set2 = {1, 2, 3}
+
+set3 = set1.union(set2)   # Unión crea un nuevo conjunto resultado.
+print(set3) 
+
+set1.update(set2)		  # Update añade los elementos de un conjunto a otro.
+print(set1) 
+
+# Constructor set
+
+set1 = set(("manzana", "plátano", "cereza")) 
+print(set1) 

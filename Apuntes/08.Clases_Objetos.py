@@ -40,3 +40,15 @@ class Persona:
 
 p1 = Persona("John", 36)
 p1.saludo() 
+
+# El parámetro self es una referencia a la instancia actual de la clase y se usa para acceder a las variables que pertenecen a la clase.
+# No tiene que llamarse self, puede llamarlo como quiera, pero tiene que ser el primer parámetro de cualquier función en la clase.
+
+# Modificar propiedades del objeto
+p1.edad = 40
+
+# Eliminar propiedades del objeto
+del p1.edad
+
+# Eliminar el objeto
+del p1  

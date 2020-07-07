@@ -51,4 +51,9 @@ p1.edad = 40
 del p1.edad
 
 # Eliminar el objeto
-del p1  
+del p1 
+
+
+# La herencia nos permite definir una clase que hereda todos los métodos y propiedades de otra clase.
+# La clase padre es la clase de la que se hereda, también llamada clase base.
+# La clase secundaria es la clase que hereda de otra clase, también llamada clase derivada. 

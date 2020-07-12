@@ -57,3 +57,54 @@ del p1
 # La herencia nos permite definir una clase que hereda todos los métodos y propiedades de otra clase.
 # La clase padre es la clase de la que se hereda, también llamada clase base.
 # La clase secundaria es la clase que hereda de otra clase, también llamada clase derivada. 
+
+class Persona:
+  def __init__(self, nombre, apellidos):
+    self.nombre = nombre
+    self.apellidos = apellidos
+
+  def imprimirnombre(self):
+    print(self.nombre, self.apellidos)
+
+x = Persona("John", "Doe")
+x.imprimirnombre() 
+
+# Clase hijo:
+
+class Estudiante(Persona):
+ 	pass 
+
+x = Estudiante("Mike", "Olsen")
+x.imprimirnombre()
+
+# Cuando agrega la función __init__(), la clase secundaria ya no heredará la función __init__() de los padres (override).
+# Para mantener la herencia de la función __init __ () del padre, agregue una llamada a la función __init__() del padre:
+
+
+class Estudiante(Persona):
+  def __init__(self, nombre, apellidos):
+  	 Persona.__init__(self, nombre, apellidos) 
+
+x = Estudiante("Mike", "Olsen")
+x.imprimirnombre()
+
+# Python también tiene una función super() que hará que la clase hija herede todos los métodos y propiedades de su padre:
+# Al usar la función super(), no tiene que usar el nombre del elemento padre, heredará automáticamente los métodos y propiedades de su padre.
+class Estudiante(Persona):
+  def __init__(self, nombre, apellidos):
+  	 super().__init__(nombre, apellidos) 
+
+y = Estudiante("Super", "Prueba")
+y.imprimirnombre()
+
+# Añadimos una propiedad y un método a la clase hija
+class Estudiante(Persona):
+  def __init__(self, nombre, apellidos, año):
+  	super().__init__(nombre, apellidos) 
+  	self.año = año
+
+  def bienvenido(self):
+    print("Bienvenido", self.nombre, self.apellidos, "del año", self.año)
+
+y = Estudiante("Super", "Prueba", 2019)
+y.bienvenido()

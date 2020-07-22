@@ -11,3 +11,41 @@ import numpy as np
 arr = np.array([1, 2, 3, 4, 5]) # También se puede con ((1,2,3,4,5))
 print(arr)
 print(type(arr))
+
+print()
+
+# Arrays multidimensionales
+
+arr0 = np.array(15) # 0D
+print(arr0)
+print()
+
+arr1 = np.array([1, 2, 3, 4, 5]) # 1D
+print(arr1)
+print()
+
+arr2 = np.array([[1, 2, 3], [4, 5, 6]]) # 2D
+print(arr2)
+print()
+
+arr3 = np.array([[[1, 2, 3], [4, 5, 6]], [[1, 2, 3], [4, 5, 6]]]) # 3D
+print(arr3)
+print()
+
+# Comprobar el número de dimensiones
+print(arr0.ndim)
+print(arr1.ndim)
+print(arr2.ndim)
+print(arr3.ndim) 
+
+print()
+
+# Acceso a elementos
+print('Segundo elemento de la primera dimensión: ', arr2[0, 1])
+
+print()
+
+# Muestra del array
+print(arr3[1:5]) 
+
+print()

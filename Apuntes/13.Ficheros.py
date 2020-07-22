@@ -16,3 +16,57 @@
 # "b" - Binario - Modo binario (por ejemplo, imágenes)
 
 f = open("demofile.txt", "rt") # rt son valores por defecto. No es necesario especificarlos.
+f.close() 
+
+f = open("demofile.txt", "r")
+print(f.read()) 
+f.close() 
+
+print()
+
+# Devolver un número concreto de caracteres
+f = open("demofile.txt", "r")
+print(f.read(5)) 
+f.close() 
+
+print()
+
+# Leer líneas
+f = open("demofile.txt", "r")
+print(f.readline()) 
+f.close() 
+
+print()
+
+f = open("demofile.txt", "r")
+for x in f:
+  print(x) 
+f.close() 
+
+# Con "a" agregas al final del fichero:
+
+f = open("demofile.txt", "a")
+f.write("Nuevo contenido")
+f.close()
+
+f = open("demofile.txt", "r")
+print(f.read())
+f.close()
+
+print()
+
+# Con "w" sobreescribes el contenido:
+f = open("demofile.txt", "w")
+f.write("El contenido ha sido borrado")
+f.close()
+
+f = open("demofile.txt", "r")
+print(f.read()) 
+f.close()
+
+# Para eliminar un archivo, debe importar el módulo del sistema operativo y ejecutar su función os.remove():
+import os
+if os.path.exists("demofile.txt"):
+  os.remove("demofile.txt")
+else:
+  print("The file does not exist") 

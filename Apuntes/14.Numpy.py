@@ -49,3 +49,31 @@ print()
 print(arr3[1:5]) 
 
 print()
+
+# Generando arrays
+
+arr0 = np.zeros(4)
+print(arr0)
+
+print()
+
+arr0 = np.ones(4)
+print(arr0)
+
+print()
+
+arr0 = np.arange(4)
+print(arr0)
+
+print()
+
+arr0 = np.arange(2,20,3) # inicio, fin, salto
+print(arr0)
+
+print()
+
+lista1 = [1,2,3,4]
+arr0 = np.array(lista1)
+print(arr0)
+
+print()

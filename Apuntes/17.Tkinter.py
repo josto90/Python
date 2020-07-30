@@ -114,10 +114,26 @@ def verificar():
 		print("El check está activado")
 	else:
 		print("El check está desactivado")
-		
+
 check1 = tkinter.IntVar()
 
 boton1 = tkinter.Checkbutton(raiz, text="Opción 1", variable=check1, onvalue=1, offvalue=0, command=verificar)
 boton1.pack()
+
+raiz.mainloop()
+
+# Componente messagebox
+
+import tkinter
+from tkinter import messagebox
+
+raiz = tkinter.Tk()
+raiz.title("Mi programa")
+
+def avisar():
+	tkinter.messagebox.showinfo("Titulo", "Mensaje con la información")
+
+boton = tkinter.Button(raiz, text="Pulsar para aviso", command=avisar)
+boton.pack()
 
 raiz.mainloop()

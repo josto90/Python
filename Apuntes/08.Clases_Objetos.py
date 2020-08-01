@@ -12,6 +12,34 @@ class MiClase:
 p1 = MiClase()
 print(p1.x) 
 
+# -------------------------------------------------------
+# Primer argumento self
+# Los objetos tienen una característica muy importante: son conscientes de que existen. Y no, no es broma.
+# Cuando se ejecuta un método desde un objeto (que no desde una clase), 
+# se envía un primer argumento implícito que hace referencia al propio objeto. 
+# Si lo definimos en nuestro método podremos capturarlo y ver qué es:
+
+class Galleta:
+    chocolate = False
+
+    def saludar(soy_el_propio_objeto): # Equivalente a poner self
+        print("Hola, soy una galleta muy sabrosa")
+        print(soy_el_propio_objeto)
+
+galleta = Galleta()
+galleta.saludar()
+print(galleta)
+
+# El parámetro self es una referencia a la instancia actual de la clase y se usa para acceder a las variables que pertenecen a la clase.
+# No tiene que llamarse self, puede llamarlo como quiera, pero tiene que ser el primer parámetro de cualquier función en la clase.
+
+# --------------------------------------------------------
+# --------------------------------------------------------
+## Métodos especiales
+# Se llaman especiales porque la mayoría ya existen de forma oculta y sirven para tareas específicas.
+# Constructor
+# El constructor es un método que se llama automáticamente al crear un objeto, se define con el nombre init:
+
 # La función __init __()
 # Los ejemplos anteriores son clases y objetos en su forma más simple, y no son realmente útiles en aplicaciones de la vida real.
 # Para comprender el significado de las clases, debemos comprender la función incorporada __init __().
@@ -41,8 +69,72 @@ class Persona:
 p1 = Persona("John", 36)
 p1.saludo() 
 
-# El parámetro self es una referencia a la instancia actual de la clase y se usa para acceder a las variables que pertenecen a la clase.
-# No tiene que llamarse self, puede llamarlo como quiera, pero tiene que ser el primer parámetro de cualquier función en la clase.
+
+
+# Destructor
+# Si existe un constructor también debe existir un destructor que se llame al eliminar el objeto 
+# para que encargue de las tareas de limpieza como vaciar la memoria. Ese es el papel del método especial del. 
+# Es muy raro sobreescribir este método porque se maneja automáticamente, pero es interesante saber que existe.
+# Todos los objetos se borran automáticamente de la memoria al finalizar el programa, 
+# aunque también podemos eliminarlos automáticamente pasándolos a la función del():
+
+class Galleta:
+
+    def __del__(self):
+        print("La galleta se está borrando de la memoria")
+
+galleta = Galleta()
+
+del(galleta)
+
+# En este punto vale comentar algo respecto a los métodos especiales como éste, 
+# y es que pese a que tienen accesores en forma de función para facilitar su llamada, 
+# es totalmente posible ejecutarlos directamente como si fueran métodos normales.
+
+
+# String
+
+# El método str es el que devuelve la representación de un objeto en forma de cadena. 
+# Un momento en que se llama automáticamente es cuando imprimirmos una variable por pantalla.
+# Por defecto los objetos imprimen su clase y una dirección de memoria, 
+# pero eso puede cambiarse sobreescribiendo el comportamiento.
+
+class Galleta:
+
+    def __init__(self, sabor, color):
+        self.sabor = sabor
+        self.color = color
+
+    def __str__(self):
+       return f"Soy una galleta {self.color} y {self.sabor}."
+
+galleta = Galleta("dulce", "blanca")
+
+print(galleta)
+print(str(galleta))
+print(galleta.__str__())
+
+# Length
+
+# Finalmente otro método especial interesante es el que devuelve la longitud.
+# Normalmente está ligado a colecciones, pero nada impide definirlo en una clase.
+# Y sí, digo definirlo y no redefinirlo porque por defecto no existe en los objetos aunque sea el que se ejecuta
+# al pasarlos a la función len().
+
+class Cancion:
+
+    def __init__(self, autor, titulo, duracion):  # en segundos
+        self.duracion = duracion
+
+    def __len__(self):
+       return self.duracion
+
+cancion = Cancion("Queen", "Don't Stop Me Now", 210)
+
+print(len(cancion))
+print(cancion.__len__())
+# --------------------------------------------------------
+
 
 # Modificar propiedades del objeto
 p1.edad = 40
@@ -53,6 +145,29 @@ del p1.edad
 # Eliminar el objeto
 del p1 
 
+# --------------------------------------------------------
+## Encapsulación
+
+# La encapsulación consiste en denegar el acceso a los atributos y métodos internos de la clase desde el exterior.
+# En Python no existe, pero se puede simular precediendo atributos y métodos con dos barras bajas __ 
+# como indicando que son "especiales".
+
+class Ejemplo:
+    __atributo_privado = "Soy un atributo inalcanzable desde fuera."
+
+e = Ejemplo()
+# print(e.__atributo_privado) daría error
+
+class Ejemplo:
+    def __metodo_privado(self):
+        print("Soy un método inalcanzable desde fuera.")
+
+e = Ejemplo()
+# e.__metodo_privado() daría error
+
+# --------------------------------------------------------
+
+## Herencia
 
 # La herencia nos permite definir una clase que hereda todos los métodos y propiedades de otra clase.
 # La clase padre es la clase de la que se hereda, también llamada clase base.
@@ -108,3 +223,5 @@ class Estudiante(Persona):
 
 y = Estudiante("Super", "Prueba", 2019)
 y.bienvenido()
+
+

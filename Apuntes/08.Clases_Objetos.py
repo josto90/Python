@@ -172,6 +172,8 @@ e = Ejemplo()
 # La herencia nos permite definir una clase que hereda todos los métodos y propiedades de otra clase.
 # La clase padre es la clase de la que se hereda, también llamada clase base.
 # La clase secundaria es la clase que hereda de otra clase, también llamada clase derivada. 
+# La idea de la herencia es identificar una clase base (la superclase) con los atriutos comunes
+# y luego crear las demás clases heredando de ella (las subclases) extendiendo sus campos específicos.
 
 class Persona:
   def __init__(self, nombre, apellidos):

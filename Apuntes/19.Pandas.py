@@ -82,4 +82,53 @@ nombres = ['Antonio','Pedro','María']
 dataframe = pd.DataFrame(valores,index=indices,columns=nombres)
 print(dataframe)
 
+print()
+
+# Eliminar elementos
+valores = [1,2,3]
+indices = ['a','b','c']
+serie = pd.Series(valores, index=indices)
+print(serie)
+serie = serie.drop('c')
+print(serie)
+
+# Operaciones en series y dataframes
+import pandas as pd
+import numpy as np
+
+serie1 = pd.Series([0,1,2], index=['a','b','c'])
+serie2 = pd.Series([3,4,5,6], index=['a','b','c','d'])
+
+print(serie1 + serie2)
+print()
+
+valores = np.arange(4).reshape(2,2)
+indices = list('ab')
+columnas = list('12')
+
+dataframe = pd.DataFrame(valores,index=indices, columns=columnas)
+
+valores2 = np.arange(9).reshape(3,3)
+indices2 = list('abc')
+columnas2 = list('123')
+dataframe2 = pd.DataFrame(valores2,index=indices2, columns=columnas2)
+
+print(dataframe + dataframe2)
+
+# Estadisticas
+print(dataframe.describe())
+print(dataframe.max()) # Hay muchas opciones
+
+# Unión de dataframes
+import pandas as pd
+dataframe1 = pd.DataFrame({'c1':['1','2','3'], 'clave':['a','b','c']})
+dataframe2 = pd.DataFrame({'c2':['4','5','6'], 'clave':['c','b','e']})
+
+dataframe3 = pd.DataFrame.merge(dataframe1,dataframe2)
+print(dataframe3)
+
+
+
+
+
 

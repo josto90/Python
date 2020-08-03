@@ -63,4 +63,23 @@ diccionario = {'Asignaturas':asignaturas, 'Notas':notas}
 dataframe_notas = pd.DataFrame(diccionario)
 print(dataframe_notas)
 
+print()
+
+
+# INDICES
+import pandas as pd
+
+valores = [1,2,3]
+indices = ['a','b','c']
+serie = pd.Series(valores, index=indices)
+print(serie.index[0])
+# serie.index[0] = 'z' --> Da error, ya que los índices no son mutables
+
+valores = [[6,7,8],[8,9,5],[6,9,7]]
+indices = ['matematicas','historia','fisica']
+nombres = ['Antonio','Pedro','María']
+
+dataframe = pd.DataFrame(valores,index=indices,columns=nombres)
+print(dataframe)
+
 

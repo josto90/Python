@@ -124,10 +124,16 @@ import pandas as pd
 dataframe1 = pd.DataFrame({'c1':['1','2','3'], 'clave':['a','b','c']})
 dataframe2 = pd.DataFrame({'c2':['4','5','6'], 'clave':['c','b','e']})
 
-dataframe3 = pd.DataFrame.merge(dataframe1,dataframe2)
+dataframe3 = pd.DataFrame.merge(dataframe1,dataframe2, on='clave')
 print(dataframe3)
 
+dataframe4 = pd.DataFrame.merge(dataframe1,dataframe2, on='clave',how='right') # rightjoin
+print(dataframe4)
 
+dataframe5 = pd.DataFrame.merge(dataframe1,dataframe2, on='clave',how='outer') # outerjoin
+print(dataframe5)
+
+## Pendiete de mejorar toda esta sección
 
 
 
